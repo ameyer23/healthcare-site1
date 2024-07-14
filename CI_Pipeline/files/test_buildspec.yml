@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+    
+  build:
+    on-failure: ABORT
+    commands:
+      - "count=$(grep -w '<title>HealthCare Hospital</title>' index.html | wc -l)"
+      - 'if [ $count -eq 0 ]; then
+          echo "Title not found"; 
+          exit 1; 
+        else
+          echo "Title found";
+          exit 0;
+        fi'
+
+    

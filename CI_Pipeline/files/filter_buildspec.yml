@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Extracting the index.html file"
+      
+artifacts:
+  files:
+    - index.html
